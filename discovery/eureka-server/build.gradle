@@ -1,0 +1,10 @@
+group = 'org.xitikit.cloud.management.discovery'
+description = 'eureka-server'
+dependencies {
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka-server', version: '1.2.5.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '1.5.2.RELEASE'
+    compile group: 'de.codecentric', name: 'spring-boot-admin-starter-client', version: '1.2.4'
+    testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.2.RELEASE') {
+        exclude(module: 'commons-logging')
+    }
+}

@@ -1,0 +1,12 @@
+rootProject.name = 'xitikit-cloud-management'
+include ':authorization:azure-b2c'
+include ':authorization'
+include ':configuration'
+include ':discovery:eureka-server'
+include ':discovery'
+
+project(':authorization:azure-b2c').projectDir = "$rootDir/authorization/azure-b2c" as File
+project(':authorization').projectDir = "$rootDir/authorization" as File
+project(':configuration').projectDir = "$rootDir/configuration" as File
+project(':discovery:eureka-server').projectDir = "$rootDir/discovery/eureka-server" as File
+project(':discovery').projectDir = "$rootDir/discovery" as File
