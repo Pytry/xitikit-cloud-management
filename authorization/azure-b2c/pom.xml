@@ -3,18 +3,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.xitikit.cloud.management.authorization</groupId>
+    <parent>
+        <groupId>org.xitikit.cloud.management.authorization</groupId>
+        <artifactId>authorization</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
     <artifactId>azure-b2c</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>azure-b2c</name>
     <description>Xitikit Azure B2C Authentication API</description>
-
-    <parent>
-        <groupId>org.xitikit.cloud.management</groupId>
-        <artifactId>xitikit-cloud-management</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
