@@ -16,11 +16,13 @@
     <packaging>jar</packaging>
 
     <modules>
-        <module>configuration-servers</module>
-        <module>discovery-servers</module>
+        <module>authorization</module>
+        <module>configuration</module>
+        <module>discovery</module>
     </modules>
+
     <name>xitikit-cloud-management</name>
-    <description>Cloud Management projects such as Eureka, Hysterics, Config Server and others</description>
+    <description>Cloud Management Projects based on sample code from Spring "Getting Started" guides.</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
