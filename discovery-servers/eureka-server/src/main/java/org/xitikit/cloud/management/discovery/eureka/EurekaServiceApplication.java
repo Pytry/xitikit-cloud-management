@@ -1,4 +1,4 @@
-package org.xitikit.cloud.management.config;
+package org.xitikit.cloud.management.discovery.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

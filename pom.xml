@@ -11,15 +11,15 @@
     </parent>
 
     <groupId>org.xitikit.cloud.management</groupId>
-    <artifactId>cloud-management</artifactId>
+    <artifactId>xitikit-cloud-management</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <modules>
-        <module>configuration</module>
+        <module>configuration-servers</module>
         <module>discovery-servers</module>
     </modules>
-    <name>br-cloud-management</name>
+    <name>xitikit-cloud-management</name>
     <description>Cloud Management projects such as Eureka, Hysterics, Config Server and others</description>
 
     <properties>
