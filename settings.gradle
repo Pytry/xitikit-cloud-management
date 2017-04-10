@@ -4,9 +4,13 @@ include ':authorization'
 include ':configuration'
 include ':discovery:eureka-server'
 include ':discovery'
+include ':proxy:zuul-proxy'
+include ':proxy'
 
 project(':authorization:azure-b2c').projectDir = "$rootDir/authorization/azure-b2c" as File
 project(':authorization').projectDir = "$rootDir/authorization" as File
 project(':configuration').projectDir = "$rootDir/configuration" as File
 project(':discovery:eureka-server').projectDir = "$rootDir/discovery/eureka-server" as File
 project(':discovery').projectDir = "$rootDir/discovery" as File
+project(':proxy').projectDir = "$rootDir/proxy" as File
+project(':proxy:zuul-proxy').projectDir = "$rootDir/proxy/zuul-proxy" as File

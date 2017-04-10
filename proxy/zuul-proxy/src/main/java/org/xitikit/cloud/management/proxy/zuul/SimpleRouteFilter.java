@@ -1,0 +1,101 @@
+package org.xitikit.cloud.management.proxy.zuul;
+
+import com.netflix.zuul.ZuulFilter;
+import com.netflix.zuul.context.RequestContext;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
+
+import javax.servlet.http.HttpServletRequest;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+@Slf4j
+@Component
+public class SimpleRouteFilter extends ZuulFilter {
+
+    /**
+     * Indicates which type of Zuul filter this is. In our case, the "route" value is returned to indicate to the Zuul
+     * server that this is a route filter.
+     *
+     * @return "route"
+     */
+    @Override
+    public String filterType() {
+        return "route";
+    }
+
+    @Override
+    public int filterOrder() {
+        return 0;
+    }
+
+    /**
+     * Indicates if a request should be filtered or not. In our case, all requests are taken into account
+     * (always return true).
+     *
+     * @return true
+     */
+    public boolean shouldFilter() {
+        return true;
+    }
+
+    /**
+     * Indicates if the provided request is authorized or not.
+     *
+     * @param request the provided request
+     * @return true if the provided request is authorized, false otherwise
+     */
+    private boolean isAuthorizedRequest(HttpServletRequest request) {
+        assert request != null;
+        // apply your filter here
+        return true;
+    }
+
+    /**
+     * This method allows to set the route host into the Zuul request context provided as parameter.
+     * The url is extracted from the original request and the host is extracted from it.
+     *
+     * @param ctx the provided Zuul request context
+     */
+    private void setRouteHost(RequestContext ctx) throws MalformedURLException {
+
+        String urlS = ctx.getRequest().getRequestURL().toString();
+        URL url = new URL(urlS);
+        String protocol = url.getProtocol();
+        String rootHost = url.getHost();
+        int port = url.getPort();
+        String portS = (port > 0 ? ":" + port : "");
+        ctx.setRouteHost(new URL(protocol + "://" + rootHost + portS));
+
+    }
+
+    /**
+     * The filter execution
+     *
+     * @return Object
+     */
+    public Object run() {
+
+        // logging the interception of the query
+        log.debug("query interception");
+
+        // retrieving the Zuul request context
+        RequestContext ctx = RequestContext.getCurrentContext();
+
+        try {
+
+            // if the requested url is authorized, the route host is set to the requested one
+            if (isAuthorizedRequest(ctx.getRequest())) {
+                setRouteHost(ctx);
+            } else {
+                // if the requested URL is not authorized, the route host is set to the urlRedirect value
+                // the client will be redirected to the new host
+                ctx.setRouteHost(new URL("http://localhost"));
+            }
+        } catch (MalformedURLException e) {
+            log.error("", e);
+        }
+
+        return null;
+    }
+}
