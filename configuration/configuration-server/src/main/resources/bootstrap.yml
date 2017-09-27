@@ -1,0 +1,10 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: ../../discovery/eureka-server/config
+        git:
+          uri: config/

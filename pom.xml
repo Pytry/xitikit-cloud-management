@@ -28,6 +28,7 @@
   <url>${project.scm.url}</url>
 
   <modules>
+    <module>configuration</module>
     <module>discovery</module>
     <module>proxy</module>
   </modules>
@@ -54,6 +55,7 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
   <profiles>
     <profile>
       <id>unit-tests</id>
