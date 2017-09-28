@@ -1,10 +1,19 @@
-server:
-  port: 8888
 spring:
+  application:
+      name: mamamoo
+  profiles:
+      active: native
   cloud:
     config:
       server:
+        bootstrap: true
         native:
-          search-locations: ../../discovery/eureka-server/config
-        git:
-          uri: config/
+          version: 1
+          fail-on-error: true
+          add-label-locations: true
+          order: 1
+          search-locations:
+            - "./external-config/"
+
+
+

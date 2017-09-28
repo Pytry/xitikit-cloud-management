@@ -1,0 +1,10 @@
+server:
+  context-path: /charisma
+  port: 8147
+logging:
+  level:
+    com.netflix.eureka: OFF
+    com.netflix.discovery: OFF
+management:
+  security:
+    enabled: false
