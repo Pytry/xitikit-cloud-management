@@ -2,24 +2,19 @@ package org.xitikit.cloud.management.monitoring.pamyu;
 
 import de.codecentric.boot.admin.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * Copyright ${year}
  *
  * @author J. Keith Hoopes
  */
-@RefreshScope
+@Configuration
 @EnableAdminServer
-@EnableCircuitBreaker
-@EnableDiscoveryClient
-@SpringBootApplication
-@EnableConfigurationProperties
-public class PamyuApplication{
+@EnableAutoConfiguration
+public class PamyuApplication extends SpringBootServletInitializer{
 
     public static void main(final String[] args){
 

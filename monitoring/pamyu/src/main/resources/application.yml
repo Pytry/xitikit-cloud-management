@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: pamyu
+  boot:
+    admin:
+      url: http://localhost:8080
+  cloud:
+    config:
+      enabled: false
+info:
+  stage: test
+endpoints:
+  health:
+    sensitive: false

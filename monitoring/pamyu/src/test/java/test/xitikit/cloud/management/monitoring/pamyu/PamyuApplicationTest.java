@@ -6,8 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.xitikit.cloud.management.monitoring.pamyu.PamyuApplication;
 
-import static org.springframework.boot.test.context.SpringBootTest.*;
-import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.*;
+import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
 
 /**
  * Copyright ${year}
