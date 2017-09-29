@@ -4,12 +4,12 @@
 
   <parent>
     <groupId>org.xitikit.cloud.management.discovery</groupId>
-    <artifactId>discovery-parent</artifactId>
+    <artifactId>discovery</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
   <groupId>org.xitikit.cloud.management.discovery</groupId>
-  <artifactId>eureka-server</artifactId>
+  <artifactId>charisma</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
