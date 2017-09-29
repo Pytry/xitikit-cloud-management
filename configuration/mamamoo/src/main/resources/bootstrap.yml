@@ -4,8 +4,11 @@ server:
 spring:
   application:
       name: mamamoo
-  profiles:
-      active: native
+  boot:
+      admin:
+        client:
+          enabled: true
+          prefer-ip: true
   cloud:
     config:
       server:
@@ -16,6 +19,8 @@ spring:
           add-label-locations: true
           order: 1
           search-locations: "./external-config/"
+  profiles:
+        active: native
 eureka:
   client:
     enabled: true
@@ -23,5 +28,10 @@ eureka:
     register-with-eureka: true
     eureka-server-u-r-l-context: /charisma
     service-url: http://localhost:8147
+management:
+
+  security:
+    enabled: false
+
 
 

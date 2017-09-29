@@ -4,7 +4,7 @@ spring:
     name: charisma
 server:
   context-path: /charisma
-  port: 8147
+  port: -1
 eureka:
   client:
     register-with-eureka: false
