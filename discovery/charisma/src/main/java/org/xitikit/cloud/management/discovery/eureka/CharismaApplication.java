@@ -10,10 +10,10 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 @EnableEurekaServer
 @SpringBootApplication
 @EnableConfigurationProperties
-public class EurekaServiceApplication{
+public class CharismaApplication{
 
     public static void main(String[] args){
 
-        SpringApplication.run(EurekaServiceApplication.class, args);
+        SpringApplication.run(CharismaApplication.class, args);
     }
 }

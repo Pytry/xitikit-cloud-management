@@ -18,7 +18,7 @@
   <url>${project.scm.url}</url>
 
   <modules>
-    <module>eureka-server</module>
+    <module>charisma</module>
   </modules>
 
 </project>
