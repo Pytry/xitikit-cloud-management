@@ -1,3 +1,6 @@
+server:
+  context-path: /mamamoo
+  port: 8888
 spring:
   application:
       name: mamamoo
@@ -13,6 +16,12 @@ spring:
           add-label-locations: true
           order: 1
           search-locations: "./external-config/"
-
+eureka:
+  client:
+    enabled: true
+    fetch-registry: true
+    register-with-eureka: true
+    eureka-server-u-r-l-context: /charisma
+    service-url: http://localhost:8147
 
 
