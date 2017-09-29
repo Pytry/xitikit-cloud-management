@@ -16,5 +16,5 @@ eureka:
     enabled: true
     fetch-registry: true
     register-with-eureka: true
-    eureka-server-u-r-l-context: /mamamoo
+    eureka-server-u-r-l-context: /charisma
     service-url: http://localhost:8147

@@ -12,8 +12,7 @@ spring:
           fail-on-error: true
           add-label-locations: true
           order: 1
-          search-locations:
-            - "./external-config/"
+          search-locations: "./external-config/"
 
 
 
