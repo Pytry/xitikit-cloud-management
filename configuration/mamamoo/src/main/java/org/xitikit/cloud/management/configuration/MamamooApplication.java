@@ -13,10 +13,10 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @EnableConfigServer
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ConfigurationServerApplication{
+public class MamamooApplication{
 
     public static void main(String[] args){
 
-        SpringApplication.run(ConfigurationServerApplication.class, args);
+        SpringApplication.run(MamamooApplication.class, args);
     }
 }
