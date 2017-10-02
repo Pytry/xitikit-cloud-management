@@ -19,12 +19,12 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-tomcat</artifactId>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-eureka</artifactId>
     </dependency>
     <dependency>
-      <groupId>de.codecentric</groupId>
-      <artifactId>spring-boot-admin-starter-client</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-tomcat</artifactId>
     </dependency>
     <dependency>
       <groupId>de.codecentric</groupId>

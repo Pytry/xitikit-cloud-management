@@ -1,0 +1,42 @@
+app:
+  url: http://127.0.0.1:${server.port}${server.context-path}
+spring:
+  application:
+    name: aaa
+    admin:
+      enabled: true
+  boot:
+    admin:
+      client:
+        enabled: true
+        prefer-ip: true
+        name: ${spring.application.name}
+        health-url: ${app.url}/health
+        service-base-url: ${app.url}
+        management-base-url: ${app.url}
+        metadata:
+          i-like-to-eat: epples and benenes
+server:
+  port: 8091
+  context-path: /aaa
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://localhost:8761/charisma/eureka"
+    fetch-registry: true
+    registry-fetch-interval-seconds: 5
+    eureka-service-url-poll-interval-seconds: 5
+  instance:
+    appname: ${spring.application.name}
+    home-page-url-path: ${server.context-path}
+    health-check-url-path: ${server.context-path}/health
+    status-page-url-path: ${server.context-path}/info
+logging:
+  level: debug
+management:
+  security:
+    enabled: false
+
+
+
+

@@ -8,7 +8,7 @@ spring:
       admin:
         client:
           enabled: true
-          prefer-ip: true
+          name: ${spring.application.name}
   cloud:
     config:
       server:
@@ -23,15 +23,17 @@ spring:
         active: native
 eureka:
   client:
-    enabled: true
-    fetch-registry: true
-    register-with-eureka: true
-    eureka-server-u-r-l-context: /charisma
-    service-url: http://localhost:8147
+    service-url:
+      defaultZone: "http://localhost:8761/charisma/eureka"
+  instance:
+    appname: ${spring.application.name}
+    home-page-url-path: ${server.context-path}
+    health-check-url-path: ${server.context-path}/health
+    status-page-url-path: ${server.context-path}/info
 management:
-
   security:
     enabled: false
+
 
 
 
