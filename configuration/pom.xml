@@ -4,7 +4,7 @@
 
   <parent>
     <groupId>org.xitikit.cloud</groupId>
-    <artifactId>xitikit-cloud-management-parent</artifactId>
+    <artifactId>xitikit-cloud-management</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
