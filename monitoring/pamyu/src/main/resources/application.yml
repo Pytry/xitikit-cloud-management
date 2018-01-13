@@ -1,10 +1,6 @@
 spring:
   application:
     name: pamyu
-  boot:
-    admin:
-      context-path: ${server.context-path}
-
 #  cloud:
 #    config:
 #      enabled: false
@@ -18,17 +14,13 @@ endpoints:
 eureka:
   client:
     service-url:
-      defaultZone: "http://localhost:8761/charisma/eureka"
+      defaultZone: "http://localhost:8761/eureka"
     fetch-registry: true
     registry-fetch-interval-seconds: 5
     eureka-service-url-poll-interval-seconds: 5
   instance:
     prefer-ip-address: true
     appname: ${spring.application.name}
-
-#    home-page-url-path: ${server.context-path}
-#    health-check-url-path: ${server.context-path}/health
-#    status-page-url-path: ${server.context-path}/info
 management:
   security:
     enabled: false

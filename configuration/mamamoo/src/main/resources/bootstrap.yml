@@ -1,5 +1,4 @@
 server:
-  context-path: /mamamoo
   port: 8888
 spring:
   application:
@@ -19,6 +18,7 @@ spring:
           add-label-locations: true
           order: 1
           search-locations: "./external-config/"
+
   profiles:
         active: native
 eureka:

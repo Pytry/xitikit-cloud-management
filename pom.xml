@@ -18,7 +18,7 @@
     <relativePath/>
   </parent>
 
-  <groupId>org.xitikit.cloud.management</groupId>
+  <groupId>org.xitikit.cloud</groupId>
   <artifactId>xitikit-cloud-management-parent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>

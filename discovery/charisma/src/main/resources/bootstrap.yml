@@ -14,12 +14,8 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-    eureka-server-u-r-l-context: /charisma
   instance:
     appname: ${spring.application.name}
-    home-page-url-path: ${server.context-path}
-    status-page-url-path: ${server.context-path}/info
-    health-check-url-path: ${server.context-path}/health
   server:
     renewal-threshold-update-interval-ms: 1000
     renewal-percent-threshold: 1.00

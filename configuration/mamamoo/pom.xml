@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.xitikit.cloud.management.configuration</groupId>
+    <groupId>org.xitikit.cloud.configuration</groupId>
     <artifactId>configuration</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.xitikit.cloud.management.configuration</groupId>
+  <groupId>org.xitikit.cloud.configuration</groupId>
   <artifactId>mamamoo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
@@ -46,7 +46,7 @@
   </dependencies>
 
   <build>
-    <finalName>eureka-server</finalName>
+    <finalName>${project.artifactId}</finalName>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>

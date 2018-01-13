@@ -10,12 +10,12 @@
   </properties>
 
   <parent>
-    <groupId>org.xitikit.cloud.management.proxy</groupId>
+    <groupId>org.xitikit.cloud.proxy</groupId>
     <artifactId>proxy-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.xitikit.cloud.management.proxy</groupId>
+  <groupId>org.xitikit.cloud.proxy</groupId>
   <artifactId>zuul-proxy</artifactId>
   <packaging>jar</packaging>
 
